@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Quiz extends StatefulWidget {
-  Quiz({Key? key}) : super(key: key);
+  const Quiz({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _QuizState createState() => _QuizState();
 }
 
@@ -93,7 +94,7 @@ class _QuizState extends State<Quiz> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,
@@ -132,7 +133,7 @@ class _QuizState extends State<Quiz> {
                   ),
                   Text(
                     perguntaAtual['Pergunta'],
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 15, // Tamanho da fonte
                       fontWeight: FontWeight.bold, // Negrito
                       color: Color.fromARGB(
@@ -146,15 +147,15 @@ class _QuizState extends State<Quiz> {
                     },
                     child: Text(
                       perguntaAtual['Respostas'][0],
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         color: Color.fromRGBO(53, 154, 58, 1),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(222, 255, 255, 255),
-                      minimumSize: Size(200, 50),
+                      primary: const Color.fromARGB(222, 255, 255, 255),
+                      minimumSize: const Size(200, 50),
                     ),
                   ),
                   ElevatedButton(
@@ -163,7 +164,7 @@ class _QuizState extends State<Quiz> {
                     },
                     child: Text(
                       perguntaAtual['Respostas'][1],
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         color: Color.fromRGBO(53, 154, 58, 1),
                         fontWeight: FontWeight.bold,
@@ -171,7 +172,7 @@ class _QuizState extends State<Quiz> {
                     ),
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(221, 255, 255, 255),
-                      minimumSize: Size(200, 50),
+                      minimumSize: const Size(200, 50),
                     ),
                   ),
                 ],
