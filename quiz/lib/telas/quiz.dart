@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'jogarnovamente.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({Key? key}) : super(key: key);
@@ -10,6 +11,8 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   int perguntanumero = 0;
+  int acertos = 0;
+  int erros = 0;
 
   List<Map<String, dynamic>> quiz = [
     {
@@ -78,11 +81,24 @@ class _QuizState extends State<Quiz> {
 
   void responder(int resposta) {
     if (perguntanumero < quiz.length - 1) {
+      Map<String, dynamic> perguntaAtual = quiz[perguntanumero];
       setState(() {
+        if (resposta == perguntaAtual['certo']) {
+          acertos++;
+        } else {
+          erros++;
+        }
         perguntanumero++;
       });
     } else {
-      // Exibiu todas as perguntas, you can add the result logic here.
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => jogarnovamente(
+            acertos: acertos,
+            erros: erros,
+          ),
+        ),
+      );
     }
   }
 
