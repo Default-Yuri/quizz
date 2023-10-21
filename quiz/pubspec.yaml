@@ -69,6 +69,8 @@ flutter:
   - assets/imagens/saci.jpg
   - assets/imagens/Saci2.jpeg
   - assets/imagens/Sereia_Iara.jpeg
+  - assets/imagens/telainicio.png
+  - assets/imagens/bot.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

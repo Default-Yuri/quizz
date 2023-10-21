@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/telas/quiz.dart';
+import 'package:quiz/telas/inicio.dart';
 
 void main() {
-  runApp(const Quiz());
+  runApp(const MaterialApp(home: TelaInicio()));
 }

@@ -171,7 +171,7 @@ class _QuizState extends State<Quiz> {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(221, 255, 255, 255),
+                      primary: const Color.fromARGB(221, 255, 255, 255),
                       minimumSize: const Size(200, 50),
                     ),
                   ),
